@@ -1,0 +1,23 @@
+Hi there this is tutorial for files in python
+Score = 91
+
+
+This is a new line added to the file.Score = 95
+
+This is a new line added to the file.Score = 95
+
+This is a new line added to the file.
+This is a new line added to the file.
+This is a new line added to the file.Score = 95
+
+This is a new line added to the file.Score = 95
+
+This is a new line added to the file.Score = 95
+
+This is a new line added to the file.Score = 95
+
+This is a new line added to the file.Score = 95
+
+This is a new line added to the file.Score = 95
+
+This is a new line added to the file.Score = 95
