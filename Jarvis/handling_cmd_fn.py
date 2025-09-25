@@ -1,10 +1,9 @@
-from speak_fn import speak
+from speak import speak
 import webbrowser
 import pygame
 import os
 import time
 import requests
-from listen_for_cmd_fn import listen_for_command
 from openai import OpenAI
 
 from dotenv import load_dotenv
@@ -24,7 +23,7 @@ def play_music():
         speak("Sorry, I cannot find the music file.")
         print("File not found:", filename)
         return
-
+    print(filename)
     try:
         # Initialize pygame completely (important!)
         pygame.init()
@@ -62,21 +61,6 @@ def fetch_news():
     except Exception as e:
         return [f"Error fetching news: {e}"]
 
-def ai_res():
-    api_key = os.getenv("OPENAI_API_KEY")
-    client = OpenAI(
-        api_key=api_key
-    )
-
-    response = client.responses.create(
-        model="gpt-5",
-        input="Write a short bedtime story about a unicorn."
-    )
-    print(response.output_text)
-
-
-
-
 def handle_command(command):
     if "open google" in command:
         open_website("https://www.google.com", "Google")
@@ -92,6 +76,5 @@ def handle_command(command):
         speak("Okay, shutting down. Goodbye!")
         exit(0)
     else:
-        ai_res()
-        # speak("Sorry, I didn’t understand that.")
+        speak("Sorry, I didn’t understand that.")
 
