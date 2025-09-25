@@ -49,7 +49,7 @@ def play_music():
         pygame.quit()
 
 def fetch_news():
-    api_key = '30626bacd2b74c29b3a4041e00aa1da7'
+    api_key = os.getenv("NEWS_API_KEY")
     url = f"https://newsapi.org/v2/top-headlines?country=us&apiKey={api_key}"
 
     speak("Fetching the today's latest news")
